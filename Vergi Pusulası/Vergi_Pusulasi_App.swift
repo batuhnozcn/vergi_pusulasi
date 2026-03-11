@@ -1,18 +1,13 @@
-//
-//  Vergi_Pusulas_App.swift
-//  Vergi Pusulası
-//
-//  Created by Batuhan Ozcan on 17.02.2026.
-//
-
 import SwiftUI
 import SwiftData
 
 @main
-struct Vergi_Pusulas_App: App {
+struct Vergi_PusulasiApp: App {
     var sharedModelContainer: ModelContainer = {
+        // Buraya kendi modellerimizi ekliyoruz
         let schema = Schema([
-            Item.self,
+            Transaction.self,
+            Dividend.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
